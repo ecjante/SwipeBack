@@ -50,6 +50,9 @@ public class SwipeBackActivity extends AppCompatActivity implements SwipeBackLay
     }
 
     public SwipeBackLayout getSwipeBackLayout() {
+        if (swipeBackLayout == null) {
+            this.swipeBackLayout = new SwipeBackLayout(this);
+        }
         return swipeBackLayout;
     }
 
