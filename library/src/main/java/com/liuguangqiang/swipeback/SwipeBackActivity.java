@@ -24,6 +24,12 @@ public class SwipeBackActivity extends AppCompatActivity implements SwipeBackLay
         swipeBackLayout.addView(view);
     }
 
+    @Override
+    public void setContentView(View view) {
+        super.setContentView(getContainer());
+        swipeBackLayout.addView(view);
+    }
+
     private View getContainer() {
         RelativeLayout container = new RelativeLayout(this);
         swipeBackLayout = new SwipeBackLayout(this);
